@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF lucrativo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- TOPO URGÊNCIA -->
+    <div class="top-bar">⚠️ ATENÇÃO: Estoque quase esgotado!</div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>ECONOMIZE MAIS DE R$1.000 FAZENDO A FESTA DO SEU FILHO EM CASA!</h1>
+
+      <video autoplay muted loop playsinline class="hero-video">
+        <source
+          src="vídeo/hero-video_1771373425439-lz_jUMFP.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo.
+      </video>
+      <p>E AINDA COMECE A GANHAR DINHEIRO MONTANDO FESTAS</p>
+      <div class="price-box">
+        <span class="old">De R$ 197,00</span>
+        <span class="new"><h2>Por R$ 19,90</h2></span>
+      </div>
+
+      <button class="cta" onclick="scrollToBuy()">COMPRAR AGORA</button>
+
+      <div class="countdown" id="countdown"></div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="benefits">
+      <div>✔ Entrega Imediata</div>
+      <div>✔ 100% Seguro</div>
+      <div>✔ Acesso Vitalício</div>
+      <div>✔ Garantia de 7 dias</div>
+    </section>
+
+    <!-- PROVA SOCIAL - CARROSSEL -->
+    <section class="carousel-section">
+      <h2>Mais de 5.000 mães satisfeitas</h2>
+      <p>Veja o que estão dizendo sobre o nosso kit</p>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+        <div class="carousel">
+          <img
+            src="imagens/t1.jpg"
+            alt="Depoimento 1"
+            class="carousel-img active"
+          />
+          <img src="imagens/t2.jpg" alt="Depoimento 2" class="carousel-img" />
+          <img src="imagens/t3.jpg" alt="Depoimento 3" class="carousel-img" />
+          <img src="imagens/t4.jpg" alt="Depoimento 4" class="carousel-img" />
+        </div>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <!-- PRODUTO DETALHE -->
+    <section id="buy" class="product">
+      <div class="pricing-container">
+        <div class="card destaque">
+          <span class="badge">NÃO PERCA ESSA CHANCE</span>
+          <img src="imagens/card1.webp" />
+        </div>
+
+        <h2>Garanta o seu agora</h2>
+
+        <ul>
+          <li>✔ Frete grátis</li>
+          <li>✔ Envio rápido</li>
+          <li>✔ Pagamento seguro</li>
+        </ul>
+
+        <button class="btn comprar">FINALIZAR COMPRA</button>
+      </div>
+    </section>
+
+    <!---produtos-->
+
+    <section class="gallery">
+      <h2>Nossos kits em destaque</h2>
+      <div class="gallery-grid">
+        <img src="imagens/kit1-8XJHx3nd.webp" alt="Kit 1" />
+        <img src="imagens/kit2-I1vxxmIc.webp" alt="Kit 2" />
+        <img src="imagens/kit3-WuHv-7Hg.webp" alt="Kit 3" />
+        <img src="imagens/kit4-CfWqCbe7.webp" alt="Kit 4" />
+        <img src="imagens/kit5-EGkvLyMq.webp" alt="Kit 5" />
+        <img src="imagens/kit6-5WBoJoFR.webp" alt="Kit 6" />
+        <img src="imagens/kit7-CVXxCM2F.webp" alt="Kit 7" />
+        <img src="imagens/kit8-BoRB6omk.webp" alt="Kit 8" />
+      </div>
+    </section>
+
+    <!---bonus1-->
+
+    <section class="bonus-section">
+      <h2>
+        VOCÊ TAMBÉM VAI LEVAR <span class="rosa">DE GRAÇA</span> ESSES<br />
+        <span class="rosa">7 BÔNUS</span> QUE SEPARAMOS:
+      </h2>
+
+      <div class="bonus-grid">
+        <!-- CARD 1 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/card1.webp" alt="" />
+          <p class="bonus">🎁 BONUS 01</p>
+          <h3>1.000 TOPOS DE BOLO</h3>
+          <p class="desc">
+            Topos prontos para editar, imprimir e decorar qualquer bolo!
+          </p>
+          <p class="price">
+            <span class="old">DE: R$97,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/card2.webp" alt="" />
+          <p class="bonus">🎁 BONUS 02</p>
+          <h3>CURSO DE SILHOUETTE STUDIO</h3>
+          <p class="desc">
+            Aprenda do básico ao avançado do programa de edição mais utilizado
+            no mundo da papelaria e encadernação!
+          </p>
+          <p class="price">
+            <span class="old">DE: R$127,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/card3.webp" alt="" />
+          <p class="bonus">🎁 BONUS 03</p>
+          <h3>500 Moldes Editáveis no Canva</h3>
+          <p class="desc">
+            Moldes limpos para você editar com o tema que você quiser!
+          </p>
+          <p class="price">
+            <span class="old">DE: R$97,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/card4.webp" alt="" />
+          <p class="bonus">🎁 BONUS 04</p>
+          <h3>FONTES PREMIUM</h3>
+          <p class="desc">
+            Coleção completa de fontes premium para deixar seus projetos únicos
+            e profissionais!
+          </p>
+          <p class="price">
+            <span class="old">DE: R$47,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!---bonus-->
+
+    <section class="bonus-section">
+      <h2>
+        UFA, são muitos <span class="rosa">bônus</span> né??<br />
+        Calma que ainda vou te dar <span class="rosa">MAIS TRÊS!</span> 😱😍👇
+      </h2>
+
+      <div class="bonus-grid">
+        <!-- CARD 1 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/image_1770180915707-uVPnJrAJ.webp" alt="" />
+          <p class="bonus">🎁 BONUS 05</p>
+          <h3>Guia da Festa Perfeita</h3>
+          <p class="desc">
+            O Guia completo para te orientar desde a compra dos materiais até o
+            soprar da velinha!
+          </p>
+          <p class="price">
+            <span class="old">DE: R$97,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/temas-em-alta-DZ99bfak.webp" alt="" />
+          <p class="bonus">🎁 BONUS 06</p>
+          <h3>Temas em Alta</h3>
+          <p class="desc">
+            Receba uma pasta exclusiva e atualizada semanalmente com temas
+            especiais.
+          </p>
+          <p class="price">
+            <span class="old">DE: R$97,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <span class="tag">GRÁTIS!</span>
+          <img src="imagens/video-tutorial-CCJbEv3J.webp" alt="" />
+          <p class="bonus">🎁 BONUS 07</p>
+          <h3>Tutorial em Vídeo com Especialista</h3>
+          <p class="desc">
+            Evite desperdiçar material e ganhar tempo com um passo a passo
+            profissional.
+          </p>
+          <p class="price">
+            <span class="old">DE: R$97,00</span>
+            <span class="new">POR: R$0,00</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--CARD VENDA-->
+
+    <div class="pricing-container">
+      <h2>ESCOLHA O PLANO IDEAL PRA VOCÊ</h2>
+      <!-- CARD PRINCIPAL -->
+      <div class="card destaque">
+        <span class="badge">MAIS VENDIDO</span>
+        <br />
+        <br />
+        <span class="tag">PREMIUM</span>
+
+        <h2>MATERIAL COMPLETO + BÔNUS</h2>
+
+        <img
+          src="imagens/mockup kit festa atual_1764129204369-SlsUkfnp.webp"
+          alt="Produto"
+          class="produto-img"
+        />
+
+        <ul class="beneficios">
+          <li>✔ Kit Completo +10.000 Temas</li>
+          <li>🎁 BÔNUS 1: 1.000 Topos de Bolo</li>
+          <li>🎁 BÔNUS 2: Curso Silhouette Studio</li>
+          <li>🎁 BÔNUS 3: 500 Moldes Editáveis</li>
+          <li>🎁 BÔNUS 4: BÔNUS 4: Fontes Premium</li>
+          <li>🎁 BÔNUS 5: Guia da Festa Perfeita</li>
+          <li>🎁 BÔNUS 6: Temas em Alta</li>
+          <li>🎁 BÔNUS 7: Tutorial em Vídeo com Especialista</li>
+          <li>✔ Atualizações Semanais</li>
+          <li>✔ Convites</li>
+          <li>✔ Caixa Milk</li>
+          <li>✔ Pirâmide</li>
+          <li>✔ Sushi</li>
+          <li>✔ Bala</li>
+          <li>✔ Mala</li>
+          <li>✔ Painéis</li>
+          <li>✔ Centros de Mesa</li>
+          <li>✔ Etiquetas Escolares</li>
+          <li>✔ Acesso Imediato e Vitalício</li>
+          <li>✔ Suporte E-mail e WhatsApp</li>
+          <li>✔ Garantia 30 Dias</li>
+        </ul>
+
+        <p class="preco-antigo">De R$ 497,00</p>
+        <h3 class="preco">R$19,90</h3>
+        <p class="info-extra">(9 a cada 10 pessoas escolhem essa oferta) ✅</p>
+        <button class="btn comprar">COMPRAR AGORA</button>
+        <p class="seguranca">✔ Compra 100% Segura</p>
+      </div>
+
+      <!-- CARD SIMPLES -->
+      <div class="card">
+        <h2>MATERIAL BÁSICO</h2>
+
+        <ul class="beneficios">
+          <li>✔ 1.000 Kits Festa</li>
+          <li>✔ Acesso Vitalício</li>
+          <li class="negativo">✖ Sem bônus ✖</li>
+        </ul>
+
+        <h1 class="preco">R$10,90</h1>
+
+        <button class="btn outline">COMPRAR AGORA</button>
+      </div>
+    </div>
+
+    <!-- GARANTIA -->
+    <section class="guarantee">
+      <h2>Garantia incondicional de 7 dias</h2>
+      <p>Ou seu dinheiro de volta</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h1>Perguntas Frequentes</h1>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">Como recebo os kits festa após a compra?</h3>
+        <p>
+          Após confirmar o pagamento, você recebe imediatamente no seu E-mail e
+          WhatsApp um link para download com todos os kits festa em PDF de alta
+          qualidade, prontos para imprimir e usar na sua festa.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">
+          Os kits festa incluem instruções de montagem?
+        </h3>
+        <p>
+          Sim! Todos os moldes vêm com instruções detalhadas e dicas
+          profissionais para você montar uma festa perfeita, mesmo sendo
+          iniciante.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">Como funciona a garantia?</h3>
+        <p>
+          Oferecemos 30 dias de garantia! Se por qualquer motivo você não ficar
+          satisfeita com os temas, devolvemos 100% do seu dinheiro!
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">
+          Que tipos de temas estão inclusos nos kits festa?
+        </h3>
+        <p>
+          São mais de 1.000 kits festa com temas variados: infantil, adulto,
+          aniversário, chá de bebê, casamento, formatura, Halloween, Natal e
+          muito mais. Há opções para todas as idades e ocasiões.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">
+          Preciso de impressora especial para os materiais?
+        </h3>
+        <p>
+          Não! Todos os kits festa são otimizados para impressão caseira em
+          folha A4 comum. Você pode imprimir em casa ou numa gráfica rápida,
+          como preferir.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">
+          Posso usar os kits festa quantas vezes quiser?
+        </h3>
+        <p>
+          Sim! Você pode imprimir e reutilizar todos os kits festa quantas vezes
+          desejar. É seu para sempre e pode usar em várias festas diferentes.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">Iniciantes conseguem utilizar?</h3>
+        <p>
+          Com certeza, esse é um dos maiores diferenciais pois são arquivos 100%
+          editáveis, você sabendo o básico de cada programa já consegue fazer
+          trabalhos fantásticos mesmo que seja iniciante.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3 onclick="toggle(this)">
+          Posso editar no celular ou só no computador?
+        </h3>
+        <p>
+          Nos dois, os kits festa têm arquivos no formato .studio, pdf e png. Os
+          arquivos que são em pdf e png você consegue editar pelo celular no
+          aplicativo canva. Já os arquivos com o formato .studio você vai
+          utilizar o computador pra editar.
+        </p>
+      </div>
+    </section>
+
+    <button class="cta">COMPRAR AGORA</button>
+
+    <footer>
+      <div class="rodape-imagens">
+        <img src="imagens/IMG_9002_1761335012356-jN2SGFyK.jpeg" />
+        <img src="imagens/IMG_9003_1761335027670-BO9Guv3K.png" />
+      </div>
+      <p>© 2026 Todos os direitos reservados</p>
+      <br />
+      <p>
+        © 2026 Materiais PDF. Todos os direitos reservados. Compra 100% segura.
+      </p>
+      <br />
+      <p>Acesso imediato após confirmação do pagamento.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
