@@ -3,433 +3,1932 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PDF lucrativo</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Kit Festa em PDF | Monte Festas Incríveis por R$19,90</title>
+    <meta
+      name="description"
+      content="Mais de 10.000 kits festa editáveis em PDF. Monte festas profissionais em casa e economize mais de R$1.000. Acesso imediato."
+    />
 
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2040276260250416');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2040276260250416&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "2040276260250416");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2040276260250416&ev=PageView&noscript=1"
+    /></noscript>
 
+    <style>
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --rosa: #e91e8c;
+        --rosa-escuro: #c0157a;
+        --rosa-claro: #fce4f3;
+        --amarelo: #ffd600;
+        --texto: #1a1a2e;
+        --cinza: #f7f7f7;
+        --cinza-medio: #e5e5e5;
+        --cinza-texto: #666;
+        --branco: #ffffff;
+        --verde: #1db954;
+        --laranja: #ff6b35;
+        --sombra: 0 4px 24px rgba(0, 0, 0, 0.1);
+        --radius: 16px;
+        --radius-sm: 8px;
+        --max: 900px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #fff;
+        color: var(--texto);
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ===== URGÊNCIA TOPO ===== */
+      .top-bar {
+        background: linear-gradient(90deg, #e91e8c 0%, #c0157a 100%);
+        color: #fff;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .top-bar span {
+        animation: pulse 1.5s infinite;
+        display: inline-block;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        background: linear-gradient(
+          160deg,
+          #1a1a2e 0%,
+          #2d1b4e 60%,
+          #3d0e5e 100%
+        );
+        color: #fff;
+        padding: 56px 20px 48px;
+        text-align: center;
+      }
+
+      .hero-eyebrow {
+        display: inline-block;
+        background: var(--amarelo);
+        color: #1a1a2e;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(26px, 5vw, 44px);
+        font-weight: 900;
+        line-height: 1.2;
+        max-width: 720px;
+        margin: 0 auto 16px;
+        letter-spacing: -0.5px;
+      }
+
+      .hero h1 .destaque {
+        color: var(--amarelo);
+      }
+
+      .hero-sub {
+        font-size: clamp(16px, 2.5vw, 20px);
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 560px;
+        margin: 0 auto 28px;
+      }
+
+      .hero-video {
+        width: 100%;
+        max-width: 560px;
+        border-radius: var(--radius);
+        margin: 0 auto 28px;
+        border: 3px solid rgba(255, 255, 255, 0.15);
+        display: block;
+      }
+
+      .price-box {
+        margin: 0 auto 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .price-box .old {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: line-through;
+      }
+
+      .price-box .new {
+        font-size: clamp(36px, 8vw, 56px);
+        font-weight: 900;
+        color: var(--amarelo);
+        line-height: 1;
+      }
+
+      .price-box .new small {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .price-note {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 4px;
+      }
+
+      /* ===== CTA PRINCIPAL ===== */
+      .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #ffd600 0%, #ffb300 100%);
+        color: #1a1a2e;
+        font-size: clamp(17px, 3vw, 22px);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 20px 40px;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 6px 32px rgba(255, 214, 0, 0.35);
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+        text-decoration: none;
+        width: 100%;
+        max-width: 480px;
+      }
+
+      .btn-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 40px rgba(255, 214, 0, 0.45);
+      }
+      .btn-cta:active {
+        transform: translateY(0);
+      }
+      .btn-cta .arrow {
+        font-size: 24px;
+      }
+
+      .cta-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .cta-trust {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .cta-trust span::before {
+        content: "✓ ";
+        color: var(--verde);
+      }
+
+      .countdown-box {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: var(--radius-sm);
+        padding: 12px 24px;
+        margin-top: 20px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .countdown-box strong {
+        color: var(--amarelo);
+        font-size: 20px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ===== BENEFÍCIOS ===== */
+      .benefits {
+        background: var(--verde);
+        padding: 16px 20px;
+        display: flex;
+        justify-content: center;
+        gap: clamp(16px, 4vw, 48px);
+        flex-wrap: wrap;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .benefits span::before {
+        content: "✔ ";
+      }
+
+      /* ===== SEÇÕES GERAIS ===== */
+      section {
+        padding: 64px 20px;
+      }
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      .section-eyebrow {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--rosa);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: clamp(24px, 4vw, 36px);
+        font-weight: 800;
+        text-align: center;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        color: var(--texto);
+      }
+
+      .section-sub {
+        text-align: center;
+        color: var(--cinza-texto);
+        font-size: 17px;
+        max-width: 560px;
+        margin: 0 auto 40px;
+      }
+
+      /* ===== PROVA SOCIAL ===== */
+      .social-proof {
+        background: var(--cinza);
+      }
+
+      .stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+      .stat-num {
+        font-size: 40px;
+        font-weight: 900;
+        color: var(--rosa);
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 14px;
+        color: var(--cinza-texto);
+        margin-top: 4px;
+      }
+
+      .carousel-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .carousel {
+        flex: 1;
+        overflow: hidden;
+        border-radius: var(--radius);
+      }
+      .carousel-img {
+        display: none;
+        width: 100%;
+        border-radius: var(--radius);
+      }
+      .carousel-img.active {
+        display: block;
+      }
+
+      .carousel-btn {
+        background: var(--rosa);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        cursor: pointer;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s;
+      }
+
+      .carousel-btn:hover {
+        background: var(--rosa-escuro);
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--cinza-medio);
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .dot.active {
+        background: var(--rosa);
+      }
+
+      /* ===== GALERIA PRODUTOS ===== */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
+        margin-top: 8px;
+      }
+
+      .gallery-grid img {
+        border-radius: var(--radius-sm);
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        transition: transform 0.2s;
+      }
+
+      .gallery-grid img:hover {
+        transform: scale(1.03);
+      }
+
+      /* ===== BÔNUS ===== */
+      .bonus-section {
+        background: var(--cinza);
+      }
+
+      .bonus-title {
+        font-size: clamp(22px, 4vw, 34px);
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 36px;
+      }
+
+      .bonus-title .rosa {
+        color: var(--rosa);
+      }
+
+      .bonus-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 24px;
+      }
+
+      .bonus-card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 0 0 20px;
+        overflow: hidden;
+        box-shadow: var(--sombra);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bonus-card .tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: var(--verde);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        padding: 4px 10px;
+        border-radius: 100px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .bonus-card img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+
+      .bonus-card-body {
+        padding: 16px 16px 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .bonus-label {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--rosa);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .bonus-card h3 {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--texto);
+        line-height: 1.3;
+      }
+      .bonus-card p.desc {
+        font-size: 14px;
+        color: var(--cinza-texto);
+        flex: 1;
+      }
+
+      .bonus-price {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .bonus-price .old-p {
+        font-size: 12px;
+        color: #bbb;
+        text-decoration: line-through;
+      }
+      .bonus-price .new-p {
+        font-size: 15px;
+        font-weight: 800;
+        color: var(--verde);
+      }
+
+      /* ===== CARD VENDA PRINCIPAL ===== */
+      .pricing-section {
+        background: linear-gradient(160deg, #1a1a2e 0%, #3d0e5e 100%);
+        padding: 64px 20px;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      @media (min-width: 640px) {
+        .pricing-grid {
+          grid-template-columns: 2fr 1fr;
+          align-items: start;
+        }
+      }
+
+      .pricing-card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 28px 24px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pricing-card.destaque {
+        border: 3px solid var(--amarelo);
+      }
+
+      .pricing-card .badge-top {
+        background: var(--amarelo);
+        color: #1a1a2e;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0 0 12px 12px;
+      }
+
+      .pricing-card .plan-name {
+        margin-top: 24px;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--rosa);
+        text-align: center;
+      }
+
+      .pricing-card h2 {
+        font-size: 22px;
+        font-weight: 900;
+        text-align: center;
+        margin: 8px 0 20px;
+        line-height: 1.2;
+      }
+
+      .pricing-card .produto-img {
+        width: 100%;
+        border-radius: var(--radius-sm);
+        margin-bottom: 20px;
+      }
+
+      .beneficios {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .beneficios li {
+        font-size: 14px;
+        color: var(--texto);
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .beneficios li.negativo {
+        color: #bbb;
+      }
+
+      .preco-antigo {
+        font-size: 14px;
+        color: #999;
+        text-decoration: line-through;
+        text-align: center;
+      }
+
+      .preco-principal {
+        font-size: clamp(36px, 7vw, 52px);
+        font-weight: 900;
+        color: var(--rosa);
+        text-align: center;
+        line-height: 1;
+        margin: 4px 0 8px;
+      }
+
+      .preco-info {
+        font-size: 13px;
+        color: var(--cinza-texto);
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .btn-comprar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: linear-gradient(
+          135deg,
+          var(--rosa) 0%,
+          var(--rosa-escuro) 100%
+        );
+        color: #fff;
+        font-size: 16px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 18px 24px;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+        box-shadow: 0 6px 24px rgba(233, 30, 140, 0.3);
+        text-decoration: none;
+      }
+
+      .btn-comprar:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 32px rgba(233, 30, 140, 0.4);
+      }
+
+      .pricing-card.destaque .btn-comprar {
+        background: linear-gradient(135deg, #ffd600 0%, #ffb300 100%);
+        color: #1a1a2e;
+        box-shadow: 0 6px 24px rgba(255, 214, 0, 0.35);
+      }
+
+      .pricing-card.destaque .btn-comprar:hover {
+        box-shadow: 0 10px 32px rgba(255, 214, 0, 0.45);
+      }
+
+      .seguranca {
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .pricing-card.basico {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
+      .pricing-card.basico h2,
+      .pricing-card.basico .preco-principal {
+        color: #fff;
+      }
+      .pricing-card.basico .beneficios li {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .pricing-card.basico .seguranca {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .pricing-card.basico .preco-antigo {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .pricing-card.basico .preco-info {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* ===== GARANTIA ===== */
+      .guarantee {
+        background: var(--cinza);
+        text-align: center;
+        padding: 56px 20px;
+      }
+
+      .guarantee-inner {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        max-width: 560px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 32px;
+        box-shadow: var(--sombra);
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: left;
+      }
+
+      .guarantee-badge {
+        width: 90px;
+        height: 90px;
+        background: var(--verde);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: center;
+        flex-shrink: 0;
+        line-height: 1.2;
+      }
+
+      .guarantee-badge .dias {
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .guarantee h2 {
+        font-size: 22px;
+        font-weight: 900;
+        margin-bottom: 6px;
+        color: var(--texto);
+      }
+      .guarantee p {
+        font-size: 15px;
+        color: var(--cinza-texto);
+      }
+
+      /* ===== FAQ ===== */
+      .faq {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 64px 20px;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--cinza-medio);
+        padding: 20px 0;
+      }
+
+      .faq-item h3 {
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        user-select: none;
+      }
+
+      .faq-item h3::after {
+        content: "+";
+        font-size: 24px;
+        color: var(--rosa);
+        flex-shrink: 0;
+        transition: transform 0.2s;
+      }
+      .faq-item.open h3::after {
+        transform: rotate(45deg);
+      }
+      .faq-item p {
+        font-size: 15px;
+        color: var(--cinza-texto);
+        margin-top: 12px;
+        display: none;
+        line-height: 1.7;
+      }
+      .faq-item.open p {
+        display: block;
+      }
+
+      /* ===== CTA FLUTUANTE MOBILE ===== */
+      .cta-sticky {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 2px solid var(--cinza-medio);
+        padding: 12px 20px;
+        z-index: 99;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 640px) {
+        .cta-sticky {
+          display: block;
+        }
+      }
+
+      /* ===== RODAPÉ ===== */
+      footer {
+        background: #0f0f1a;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 48px 20px 80px;
+      }
+
+      .footer-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .footer-brand h3 {
+        font-size: 20px;
+        font-weight: 900;
+        color: #fff;
+      }
+      .footer-brand p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-col h4 {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col ul li a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.15s;
+      }
+
+      .footer-col ul li a:hover {
+        color: var(--rosa);
+      }
+
+      .footer-seals {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+
+      .footer-seals img {
+        height: 36px;
+        width: auto;
+        filter: brightness(0.8);
+      }
+
+      .footer-bottom {
+        max-width: var(--max);
+        margin: 40px auto 0;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.45);
+        transition: color 0.15s;
+      }
+      .footer-links a:hover {
+        color: var(--rosa);
+      }
+
+      /* ===== MODAL POLÍTICA ===== */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .modal-overlay.open {
+        display: flex;
+      }
+
+      .modal {
+        background: #fff;
+        border-radius: var(--radius);
+        max-width: 640px;
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+        padding: 32px;
+        position: relative;
+      }
+
+      .modal h2 {
+        font-size: 22px;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .modal h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 20px 0 8px;
+      }
+      .modal p,
+      .modal li {
+        font-size: 14px;
+        color: var(--cinza-texto);
+        line-height: 1.7;
+      }
+      .modal ul {
+        padding-left: 20px;
+        margin-bottom: 12px;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--cinza-texto);
+        line-height: 1;
+      }
+
+      .modal-close:hover {
+        color: var(--texto);
+      }
+
+      /* ===== RESPONSIVO ===== */
+      @media (max-width: 480px) {
+        .benefits {
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        }
+        .stats-row {
+          gap: 24px;
+        }
+        .guarantee-inner {
+          padding: 24px 20px;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <!-- TOPO URGÊNCIA -->
-    <div class="top-bar">⚠️ ATENÇÃO: Estoque quase esgotado!</div>
+    <div class="top-bar">
+      <span
+        >⚠️ ATENÇÃO: Restam apenas algumas vagas neste preço — oferta expira em
+        breve!</span
+      >
+    </div>
 
     <!-- HERO -->
     <section class="hero">
-      <h1>ECONOMIZE MAIS DE R$1.000 FAZENDO A FESTA DO SEU FILHO EM CASA!</h1>
+      <div class="hero-eyebrow">🎉 Mais de 5.000 famílias já compraram</div>
+
+      <h1>
+        Monte a festa dos seus filhos<br />
+        <span class="destaque">em casa e economize R$1.000+</span><br />
+        sem sair de perto deles
+      </h1>
+
+      <p class="hero-sub">
+        +10.000 kits festa editáveis em PDF prontos para imprimir — do convite
+        ao painel. Sem precisar de designer, sem gastar uma fortuna.
+      </p>
 
       <video autoplay muted loop playsinline class="hero-video">
         <source
           src="vídeo/hero-video_1771373425439-lz_jUMFP.mp4"
           type="video/mp4"
         />
-        Seu navegador não suporta vídeo.
       </video>
-      <p>E AINDA COMECE A GANHAR DINHEIRO MONTANDO FESTAS</p>
+
       <div class="price-box">
         <span class="old">De R$ 197,00</span>
-        <span class="new"><h2>Por R$ 19,90</h2></span>
+        <span class="new"><small>R$</small>19<small>,90</small></span>
+        <span class="price-note"
+          >Acesso imediato · Pagamento único · Sem mensalidade</span
+        >
       </div>
 
-      <button class="cta" onclick="window.location.href='https://checkout.materialempdf.online/VCCL1O8SD052'">COMPRAR AGORA</button>
+      <div class="cta-wrapper">
+        <a
+          href="https://checkout.materialempdf.online/VCCL1O8SD052"
+          class="btn-cta"
+        >
+          Quero meu kit agora <span class="arrow">→</span>
+        </a>
+        <div class="cta-trust">
+          <span>Pagamento seguro</span>
+          <span>Acesso em minutos</span>
+          <span>Garantia de 7 dias</span>
+        </div>
+      </div>
 
-      <div class="countdown" id="countdown"></div>
+      <div class="countdown-box">
+        🕐 Oferta especial termina em: <strong id="countdown"></strong>
+      </div>
     </section>
 
     <!-- BENEFÍCIOS -->
-    <section class="benefits">
-      <div>✔ Entrega Imediata</div>
-      <div>✔ 100% Seguro</div>
-      <div>✔ Acesso Vitalício</div>
-      <div>✔ Garantia de 7 dias</div>
-    </section>
-
-    <!-- PROVA SOCIAL - CARROSSEL -->
-    <section class="carousel-section">
-      <h2>Mais de 5.000 mães satisfeitas</h2>
-      <p>Veja o que estão dizendo sobre o nosso kit</p>
-      <div class="carousel-container">
-        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
-        <div class="carousel">
-          <img
-            src="imagens/t1.jpg"
-            alt="Depoimento 1"
-            class="carousel-img active"
-          />
-          <img src="imagens/t2.jpg" alt="Depoimento 2" class="carousel-img" />
-          <img src="imagens/t3.jpg" alt="Depoimento 3" class="carousel-img" />
-          <img src="imagens/t4.jpg" alt="Depoimento 4" class="carousel-img" />
-        </div>
-        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
-      </div>
-      <div class="carousel-dots">
-        <span class="dot active" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-    </section>
-
-    <!-- PRODUTO DETALHE -->
-    <section id="buy" class="product">
-      <div class="pricing-container">
-        <div class="card destaque">
-          <span class="badge">NÃO PERCA ESSA CHANCE</span>
-          <img src="imagens/card1.webp" />
-        </div>
-
-        <h2>Garanta o seu agora</h2>
-
-        <ul>
-          <li>✔ Frete grátis</li>
-          <li>✔ Envio rápido</li>
-          <li>✔ Pagamento seguro</li>
-        </ul>
-
-        <a href="https://checkout.materialempdf.online/VCCL1O8SD052" class="btn comprar">
-            FINALIZAR COMPRA
-        </a>
-      </div>
-    </section>
-
-    <!---produtos-->
-
-    <section class="gallery">
-      <h2>Nossos kits em destaque</h2>
-      <div class="gallery-grid">
-        <img src="imagens/kit1-8XJHx3nd.webp" alt="Kit 1" />
-        <img src="imagens/kit2-I1vxxmIc.webp" alt="Kit 2" />
-        <img src="imagens/kit3-WuHv-7Hg.webp" alt="Kit 3" />
-        <img src="imagens/kit4-CfWqCbe7.webp" alt="Kit 4" />
-        <img src="imagens/kit5-EGkvLyMq.webp" alt="Kit 5" />
-        <img src="imagens/kit6-5WBoJoFR.webp" alt="Kit 6" />
-        <img src="imagens/kit7-CVXxCM2F.webp" alt="Kit 7" />
-        <img src="imagens/kit8-BoRB6omk.webp" alt="Kit 8" />
-      </div>
-    </section>
-
-    <!---bonus1-->
-
-    <section class="bonus-section">
-      <h2>
-        VOCÊ TAMBÉM VAI LEVAR <span class="rosa">DE GRAÇA</span> ESSES<br />
-        <span class="rosa">7 BÔNUS</span> QUE SEPARAMOS:
-      </h2>
-
-      <div class="bonus-grid">
-        <!-- CARD 1 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/card1.webp" alt="" />
-          <p class="bonus">🎁 BONUS 01</p>
-          <h3>1.000 TOPOS DE BOLO</h3>
-          <p class="desc">
-            Topos prontos para editar, imprimir e decorar qualquer bolo!
-          </p>
-          <p class="price">
-            <span class="old">DE: R$97,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/card2.webp" alt="" />
-          <p class="bonus">🎁 BONUS 02</p>
-          <h3>CURSO DE SILHOUETTE STUDIO</h3>
-          <p class="desc">
-            Aprenda do básico ao avançado do programa de edição mais utilizado
-            no mundo da papelaria e encadernação!
-          </p>
-          <p class="price">
-            <span class="old">DE: R$127,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/card3.webp" alt="" />
-          <p class="bonus">🎁 BONUS 03</p>
-          <h3>500 Moldes Editáveis no Canva</h3>
-          <p class="desc">
-            Moldes limpos para você editar com o tema que você quiser!
-          </p>
-          <p class="price">
-            <span class="old">DE: R$97,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/card4.webp" alt="" />
-          <p class="bonus">🎁 BONUS 04</p>
-          <h3>FONTES PREMIUM</h3>
-          <p class="desc">
-            Coleção completa de fontes premium para deixar seus projetos únicos
-            e profissionais!
-          </p>
-          <p class="price">
-            <span class="old">DE: R$47,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!---bonus-->
-
-    <section class="bonus-section">
-      <h2>
-        UFA, são muitos <span class="rosa">bônus</span> né??<br />
-        Calma que ainda vou te dar <span class="rosa">MAIS TRÊS!</span> 😱😍👇
-      </h2>
-
-      <div class="bonus-grid">
-        <!-- CARD 1 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/image_1770180915707-uVPnJrAJ.webp" alt="" />
-          <p class="bonus">🎁 BONUS 05</p>
-          <h3>Guia da Festa Perfeita</h3>
-          <p class="desc">
-            O Guia completo para te orientar desde a compra dos materiais até o
-            soprar da velinha!
-          </p>
-          <p class="price">
-            <span class="old">DE: R$97,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/temas-em-alta-DZ99bfak.webp" alt="" />
-          <p class="bonus">🎁 BONUS 06</p>
-          <h3>Temas em Alta</h3>
-          <p class="desc">
-            Receba uma pasta exclusiva e atualizada semanalmente com temas
-            especiais.
-          </p>
-          <p class="price">
-            <span class="old">DE: R$97,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="card">
-          <span class="tag">GRÁTIS!</span>
-          <img src="imagens/video-tutorial-CCJbEv3J.webp" alt="" />
-          <p class="bonus">🎁 BONUS 07</p>
-          <h3>Tutorial em Vídeo com Especialista</h3>
-          <p class="desc">
-            Evite desperdiçar material e ganhar tempo com um passo a passo
-            profissional.
-          </p>
-          <p class="price">
-            <span class="old">DE: R$97,00</span>
-            <span class="new">POR: R$0,00</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--CARD VENDA-->
-
-    <div class="pricing-container">
-      <h2>ESCOLHA O PLANO IDEAL PRA VOCÊ</h2>
-      <!-- CARD PRINCIPAL -->
-      <div class="card destaque">
-        <span class="badge">MAIS VENDIDO</span>
-        <br />
-        <br />
-        <span class="tag">PREMIUM</span>
-
-        <h2>MATERIAL COMPLETO + BÔNUS</h2>
-
-        <img
-          src="imagens/mockup kit festa atual_1764129204369-SlsUkfnp.webp"
-          alt="Produto"
-          class="produto-img"
-        />
-
-        <ul class="beneficios">
-          <li>✔ Kit Completo +10.000 Temas</li>
-          <li>🎁 BÔNUS 1: 1.000 Topos de Bolo</li>
-          <li>🎁 BÔNUS 2: Curso Silhouette Studio</li>
-          <li>🎁 BÔNUS 3: 500 Moldes Editáveis</li>
-          <li>🎁 BÔNUS 4: BÔNUS 4: Fontes Premium</li>
-          <li>🎁 BÔNUS 5: Guia da Festa Perfeita</li>
-          <li>🎁 BÔNUS 6: Temas em Alta</li>
-          <li>🎁 BÔNUS 7: Tutorial em Vídeo com Especialista</li>
-          <li>✔ Atualizações Semanais</li>
-          <li>✔ Convites</li>
-          <li>✔ Caixa Milk</li>
-          <li>✔ Pirâmide</li>
-          <li>✔ Sushi</li>
-          <li>✔ Bala</li>
-          <li>✔ Mala</li>
-          <li>✔ Painéis</li>
-          <li>✔ Centros de Mesa</li>
-          <li>✔ Etiquetas Escolares</li>
-          <li>✔ Acesso Imediato e Vitalício</li>
-          <li>✔ Suporte E-mail e WhatsApp</li>
-          <li>✔ Garantia 30 Dias</li>
-        </ul>
-
-        <p class="preco-antigo">De R$ 497,00</p>
-        <h3 class="preco">R$19,90</h3>
-        <p class="info-extra">(9 a cada 10 pessoas escolhem essa oferta) ✅</p>
-        <button class="btn comprar" onclick="window.location.href='https://checkout.materialempdf.online/VCCL1O8SD052'">COMPRAR AGORA</button>
-        <p class="seguranca">✔ Compra 100% Segura</p>
-      </div>
-
-      <!-- CARD SIMPLES -->
-      <div class="card">
-        <h2>MATERIAL BÁSICO</h2>
-
-        <ul class="beneficios">
-          <li>✔ 1.000 Kits Festa</li>
-          <li>✔ Acesso Vitalício</li>
-          <li class="negativo">✖ Sem bônus ✖</li>
-        </ul>
-
-        <h1 class="preco">R$10,90</h1>
-
-         <button class="btn comprar" onclick="window.location.href='https://checkout.materialempdf.online/VCCL1O8SD053'">COMPRAR AGORA</button>
-      </div>
+    <div class="benefits">
+      <span>Entrega Imediata</span>
+      <span>100% Seguro</span>
+      <span>Acesso Vitalício</span>
+      <span>Garantia de 7 dias</span>
     </div>
+
+    <!-- PROVA SOCIAL -->
+    <section class="social-proof">
+      <div class="container">
+        <p class="section-eyebrow">Resultados reais</p>
+        <h2 class="section-title">Quem comprou, aprovou</h2>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-num">5.000+</div>
+            <div class="stat-label">mães satisfeitas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">⭐ 4,9</div>
+            <div class="stat-label">avaliação média</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">R$1.000+</div>
+            <div class="stat-label">economizados por festa</div>
+          </div>
+        </div>
+
+        <div class="carousel-container">
+          <button
+            class="carousel-btn prev"
+            onclick="moveCarousel(-1)"
+            aria-label="Anterior"
+          >
+            ❮
+          </button>
+          <div class="carousel">
+            <img
+              src="imagens/t1.jpg"
+              alt="Depoimento de cliente 1"
+              class="carousel-img active"
+            />
+            <img
+              src="imagens/t2.jpg"
+              alt="Depoimento de cliente 2"
+              class="carousel-img"
+            />
+            <img
+              src="imagens/t3.jpg"
+              alt="Depoimento de cliente 3"
+              class="carousel-img"
+            />
+            <img
+              src="imagens/t4.jpg"
+              alt="Depoimento de cliente 4"
+              class="carousel-img"
+            />
+          </div>
+          <button
+            class="carousel-btn next"
+            onclick="moveCarousel(1)"
+            aria-label="Próximo"
+          >
+            ❯
+          </button>
+        </div>
+
+        <div class="carousel-dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section>
+      <div class="container">
+        <p class="section-eyebrow">O que está incluído</p>
+        <h2 class="section-title">Temas para todas as festas</h2>
+        <p class="section-sub">
+          Infantil, adulto, chá de bebê, casamento, formaturas e muito mais —
+          sempre atualizados.
+        </p>
+        <div class="gallery-grid">
+          <img src="imagens/kit1-8XJHx3nd.webp" alt="Kit festa tema 1" />
+          <img src="imagens/kit2-I1vxxmIc.webp" alt="Kit festa tema 2" />
+          <img src="imagens/kit3-WuHv-7Hg.webp" alt="Kit festa tema 3" />
+          <img src="imagens/kit4-CfWqCbe7.webp" alt="Kit festa tema 4" />
+          <img src="imagens/kit5-EGkvLyMq.webp" alt="Kit festa tema 5" />
+          <img src="imagens/kit6-5WBoJoFR.webp" alt="Kit festa tema 6" />
+          <img src="imagens/kit7-CVXxCM2F.webp" alt="Kit festa tema 7" />
+          <img src="imagens/kit8-BoRB6omk.webp" alt="Kit festa tema 8" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BÔNUS 1-4 -->
+    <section class="bonus-section">
+      <div class="container">
+        <h2 class="bonus-title">
+          Você também leva <span class="rosa">de graça</span> esses<br />
+          <span class="rosa">7 bônus</span> exclusivos:
+        </h2>
+
+        <div class="bonus-grid">
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img src="imagens/card1.webp" alt="1.000 Topos de Bolo" />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 01</p>
+              <h3>1.000 Topos de Bolo</h3>
+              <p class="desc">
+                Prontos para editar, imprimir e decorar qualquer bolo!
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$97,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img src="imagens/card2.webp" alt="Curso Silhouette Studio" />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 02</p>
+              <h3>Curso de Silhouette Studio</h3>
+              <p class="desc">
+                Do básico ao avançado do programa mais usado em papelaria.
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$127,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img src="imagens/card3.webp" alt="500 Moldes no Canva" />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 03</p>
+              <h3>500 Moldes Editáveis no Canva</h3>
+              <p class="desc">
+                Moldes limpos para editar com qualquer tema que você quiser.
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$97,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img src="imagens/card4.webp" alt="Fontes Premium" />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 04</p>
+              <h3>Fontes Premium</h3>
+              <p class="desc">
+                Coleção completa para projetos únicos e profissionais.
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$47,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BÔNUS 5-7 -->
+    <section>
+      <div class="container">
+        <h2 class="bonus-title" style="color: var(--texto)">
+          Ufa, são muitos bônus né? Calma que ainda tem
+          <span class="rosa">mais 3!</span> 😱
+        </h2>
+
+        <div class="bonus-grid">
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img
+              src="imagens/image_1770180915707-uVPnJrAJ.webp"
+              alt="Guia da Festa Perfeita"
+            />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 05</p>
+              <h3>Guia da Festa Perfeita</h3>
+              <p class="desc">
+                Desde a compra dos materiais até o soprar da velinha.
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$97,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img
+              src="imagens/temas-em-alta-DZ99bfak.webp"
+              alt="Temas em Alta"
+            />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 06</p>
+              <h3>Temas em Alta</h3>
+              <p class="desc">
+                Pasta exclusiva atualizada semanalmente com os temas mais
+                pedidos.
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$97,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bonus-card">
+            <span class="tag">Grátis!</span>
+            <img
+              src="imagens/video-tutorial-CCJbEv3J.webp"
+              alt="Tutorial em Vídeo"
+            />
+            <div class="bonus-card-body">
+              <p class="bonus-label">🎁 Bônus 07</p>
+              <h3>Tutorial em Vídeo com Especialista</h3>
+              <p class="desc">
+                Passo a passo profissional para não desperdiçar material nem
+                tempo.
+              </p>
+              <div class="bonus-price">
+                <span class="old-p">De R$97,00</span>
+                <span class="new-p">Incluso grátis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD VENDA FINAL -->
+    <section class="pricing-section">
+      <div class="container">
+        <p class="section-eyebrow" style="color: rgba(255, 255, 255, 0.5)">
+          Escolha seu plano
+        </p>
+        <h2 class="section-title" style="color: #fff; margin-bottom: 36px">
+          Garanta o seu acesso agora
+        </h2>
+
+        <div class="pricing-grid">
+          <!-- DESTAQUE -->
+          <div class="pricing-card destaque">
+            <span class="badge-top">⭐ Mais escolhido (9 em cada 10)</span>
+            <p class="plan-name">Premium</p>
+            <h2>Material Completo + 7 Bônus</h2>
+            <img
+              src="imagens/mockup kit festa atual_1764129204369-SlsUkfnp.webp"
+              alt="Kit completo"
+              class="produto-img"
+            />
+
+            <ul class="beneficios">
+              <li>✔ Kit Completo +10.000 Temas</li>
+              <li>🎁 Bônus 1: 1.000 Topos de Bolo</li>
+              <li>🎁 Bônus 2: Curso Silhouette Studio</li>
+              <li>🎁 Bônus 3: 500 Moldes Editáveis</li>
+              <li>🎁 Bônus 4: Fontes Premium</li>
+              <li>🎁 Bônus 5: Guia da Festa Perfeita</li>
+              <li>🎁 Bônus 6: Temas em Alta</li>
+              <li>🎁 Bônus 7: Tutorial com Especialista</li>
+              <li>✔ Convites, caixas, painéis, etiquetas e muito mais</li>
+              <li>✔ Atualizações semanais inclusas</li>
+              <li>✔ Acesso imediato e vitalício</li>
+              <li>✔ Suporte por e-mail e WhatsApp</li>
+              <li>✔ Garantia incondicional de 30 dias</li>
+            </ul>
+
+            <p class="preco-antigo">De R$ 497,00</p>
+            <p class="preco-principal">R$19,90</p>
+            <p class="preco-info">Pagamento único · Acesso em minutos</p>
+
+            <a
+              href="https://checkout.materialempdf.online/VCCL1O8SD052"
+              class="btn-comprar"
+            >
+              Quero este plano → Comprar agora
+            </a>
+            <p class="seguranca">🔒 Compra 100% segura · Dados protegidos</p>
+          </div>
+
+          <!-- BÁSICO -->
+          <div class="pricing-card basico">
+            <p class="plan-name" style="color: rgba(255, 255, 255, 0.5)">
+              Básico
+            </p>
+            <h2>Material Básico</h2>
+
+            <ul class="beneficios">
+              <li>✔ 1.000 Kits Festa</li>
+              <li>✔ Acesso vitalício</li>
+              <li class="negativo">✖ Sem bônus inclusos</li>
+            </ul>
+
+            <p class="preco-antigo">De R$ 49,90</p>
+            <p class="preco-principal">R$10,90</p>
+            <p class="preco-info">Pagamento único</p>
+
+            <a
+              href="https://checkout.materialempdf.online/VCCL1O8SD053"
+              class="btn-comprar"
+            >
+              Escolher básico
+            </a>
+            <p class="seguranca" style="color: rgba(255, 255, 255, 0.3)">
+              🔒 Compra 100% segura
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- GARANTIA -->
     <section class="guarantee">
-      <h2>Garantia incondicional de 7 dias</h2>
-      <p>Ou seu dinheiro de volta</p>
+      <div class="guarantee-inner">
+        <div class="guarantee-badge">
+          <span class="dias">30</span>
+          <span>dias de</span>
+          <span>garantia</span>
+        </div>
+        <div>
+          <h2>Garantia incondicional de 30 dias</h2>
+          <p>
+            Se por qualquer motivo você não ficar satisfeita, devolvemos 100% do
+            seu dinheiro. Sem burocracia, sem perguntas.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- FAQ -->
     <section class="faq">
-      <h1>Perguntas Frequentes</h1>
+      <p class="section-eyebrow">Dúvidas frequentes</p>
+      <h2 class="section-title" style="text-align: left; margin-bottom: 32px">
+        Perguntas que recebemos bastante
+      </h2>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">Como recebo os kits festa após a compra?</h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Como recebo os kits após a compra?</h3>
         <p>
-          Após confirmar o pagamento, você recebe imediatamente no seu E-mail e
-          WhatsApp um link para download com todos os kits festa em PDF de alta
-          qualidade, prontos para imprimir e usar na sua festa.
+          Assim que o pagamento for confirmado, você recebe no seu e-mail e
+          WhatsApp um link de acesso imediato com todos os kits em PDF de alta
+          qualidade, prontos para imprimir.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">
-          Os kits festa incluem instruções de montagem?
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">
+          Os kits incluem instruções de montagem?
         </h3>
         <p>
-          Sim! Todos os moldes vêm com instruções detalhadas e dicas
-          profissionais para você montar uma festa perfeita, mesmo sendo
-          iniciante.
+          Sim! Todos vêm com instruções detalhadas e dicas profissionais para
+          montar uma festa perfeita, mesmo sendo iniciante.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">Como funciona a garantia?</h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Como funciona a garantia?</h3>
         <p>
-          Oferecemos 30 dias de garantia! Se por qualquer motivo você não ficar
-          satisfeita com os temas, devolvemos 100% do seu dinheiro!
+          Oferecemos 30 dias de garantia. Se por qualquer motivo você não ficar
+          satisfeita, devolvemos 100% do seu dinheiro — sem perguntas.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">
-          Que tipos de temas estão inclusos nos kits festa?
-        </h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Que tipos de temas estão inclusos?</h3>
         <p>
-          São mais de 1.000 kits festa com temas variados: infantil, adulto,
+          São mais de 10.000 kits com temas variados: infantil, adulto,
           aniversário, chá de bebê, casamento, formatura, Halloween, Natal e
-          muito mais. Há opções para todas as idades e ocasiões.
+          muito mais.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">
-          Preciso de impressora especial para os materiais?
-        </h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Preciso de impressora especial?</h3>
         <p>
-          Não! Todos os kits festa são otimizados para impressão caseira em
-          folha A4 comum. Você pode imprimir em casa ou numa gráfica rápida,
-          como preferir.
+          Não! Todos os kits são otimizados para impressão em folha A4 comum.
+          Você pode imprimir em casa ou em qualquer gráfica rápida.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">
-          Posso usar os kits festa quantas vezes quiser?
-        </h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Posso usar quantas vezes quiser?</h3>
         <p>
-          Sim! Você pode imprimir e reutilizar todos os kits festa quantas vezes
-          desejar. É seu para sempre e pode usar em várias festas diferentes.
+          Sim! O acesso é vitalício e você pode imprimir os materiais quantas
+          vezes desejar, em quantas festas quiser.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">Iniciantes conseguem utilizar?</h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Funciona para iniciantes?</h3>
         <p>
-          Com certeza, esse é um dos maiores diferenciais pois são arquivos 100%
-          editáveis, você sabendo o básico de cada programa já consegue fazer
-          trabalhos fantásticos mesmo que seja iniciante.
+          Com certeza. Os arquivos são 100% editáveis — com o básico de cada
+          programa você já consegue resultados incríveis, mesmo sem experiência
+          anterior.
         </p>
       </div>
 
-      <div class="item">
-        <h3 onclick="toggle(this)">
-          Posso editar no celular ou só no computador?
-        </h3>
+      <div class="faq-item">
+        <h3 onclick="toggleFaq(this)">Posso editar pelo celular?</h3>
         <p>
-          Nos dois, os kits festa têm arquivos no formato .studio, pdf e png. Os
-          arquivos que são em pdf e png você consegue editar pelo celular no
-          aplicativo canva. Já os arquivos com o formato .studio você vai
-          utilizar o computador pra editar.
+          Sim! Os arquivos em PDF e PNG podem ser editados pelo celular no
+          aplicativo Canva. Os arquivos .studio requerem computador com o
+          programa Silhouette Studio.
         </p>
       </div>
     </section>
 
-    <button class="cta">COMPRAR AGORA</button>
-
-    <footer>
-      <div class="rodape-imagens">
-        <img src="imagens/IMG_9002_1761335012356-jN2SGFyK.jpeg" />
-        <img src="imagens/IMG_9003_1761335027670-BO9Guv3K.png" />
-      </div>
-      <p>© 2026 Todos os direitos reservados</p>
-      <br />
-      <p>
-        © 2026 Materiais PDF. Todos os direitos reservados. Compra 100% segura.
+    <!-- CTA FINAL -->
+    <section
+      style="background: var(--rosa); padding: 56px 20px; text-align: center"
+    >
+      <h2
+        style="
+          color: #fff;
+          font-size: clamp(24px, 4vw, 38px);
+          font-weight: 900;
+          margin-bottom: 12px;
+        "
+      >
+        Pronta para montar a melhor festa?
+      </h2>
+      <p
+        style="
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 18px;
+          margin-bottom: 28px;
+          max-width: 520px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        Junte-se a mais de 5.000 mães que já economizaram e fizeram festas
+        incríveis com nossos kits.
       </p>
-      <br />
-      <p>Acesso imediato após confirmação do pagamento.</p>
+      <div class="cta-wrapper">
+        <a
+          href="https://checkout.materialempdf.online/VCCL1O8SD052"
+          class="btn-cta"
+          style="
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            color: var(--rosa);
+          "
+        >
+          Quero meu kit agora <span class="arrow">→</span>
+        </a>
+        <div class="cta-trust" style="color: rgba(255, 255, 255, 0.75)">
+          <span>Garantia de 30 dias</span>
+          <span>Acesso imediato</span>
+          <span>Pagamento seguro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>🎉 Materiais em PDF</h3>
+          <p>
+            Kits festa editáveis de alta qualidade para você montar festas
+            incríveis em casa e economizar muito.
+          </p>
+          <div class="footer-seals">
+            <img
+              src="imagens/IMG_9002_1761335012356-jN2SGFyK.jpeg"
+              alt="Selo de segurança"
+            />
+            <img
+              src="imagens/IMG_9003_1761335027670-BO9Guv3K.png"
+              alt="Certificação de pagamento seguro"
+            />
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li>
+              <a href="https://checkout.materialempdf.online/VCCL1O8SD052"
+                >Comprar agora</a
+              >
+            </li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="#garantia">Garantia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li>
+              <a href="mailto:suporte@materialempdf.online"
+                >suporte@materialempdf.online</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  abrirPolitica('privacidade');
+                  return false;
+                "
+                >Política de Privacidade</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  abrirPolitica('termos');
+                  return false;
+                "
+                >Termos de Uso</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="
+                  abrirPolitica('reembolso');
+                  return false;
+                "
+                >Política de Reembolso</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Materiais PDF. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a
+            href="#"
+            onclick="
+              abrirPolitica('privacidade');
+              return false;
+            "
+            >Privacidade</a
+          >
+          <a
+            href="#"
+            onclick="
+              abrirPolitica('termos');
+              return false;
+            "
+            >Termos</a
+          >
+          <a
+            href="#"
+            onclick="
+              abrirPolitica('reembolso');
+              return false;
+            "
+            >Reembolso</a
+          >
+        </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- CTA STICKY MOBILE -->
+    <div class="cta-sticky">
+      <a
+        href="https://checkout.materialempdf.online/VCCL1O8SD052"
+        class="btn-comprar"
+        style="font-size: 15px; padding: 14px 20px"
+      >
+        🎉 Comprar por R$19,90 →
+      </a>
+    </div>
+
+    <!-- MODAIS DE POLÍTICA -->
+    <div class="modal-overlay" id="modal-privacidade">
+      <div class="modal">
+        <button
+          class="modal-close"
+          onclick="fecharModal('privacidade')"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+        <h2>Política de Privacidade</h2>
+        <p><em>Última atualização: janeiro de 2026</em></p>
+
+        <h3>1. Quem somos</h3>
+        <p>
+          Materiais PDF é responsável pelo site materialempdf.online e pelo
+          tratamento dos dados pessoais descritos nesta política.
+        </p>
+
+        <h3>2. Dados que coletamos</h3>
+        <ul>
+          <li>
+            Dados fornecidos por você: nome, e-mail, telefone (WhatsApp) durante
+            a compra.
+          </li>
+          <li>
+            Dados de navegação: cookies, páginas visitadas, tempo na página, via
+            Meta Pixel e Google Analytics.
+          </li>
+        </ul>
+
+        <h3>3. Para que usamos seus dados</h3>
+        <ul>
+          <li>Processar e entregar sua compra;</li>
+          <li>Enviar seu acesso por e-mail e WhatsApp;</li>
+          <li>Prestar suporte ao cliente;</li>
+          <li>
+            Enviar comunicações sobre novidades (você pode cancelar a qualquer
+            momento);
+          </li>
+          <li>Melhorar nossa publicidade e experiência no site.</li>
+        </ul>
+
+        <h3>4. Compartilhamento de dados</h3>
+        <p>
+          Seus dados são compartilhados apenas com prestadores de serviço
+          essenciais (plataforma de pagamento, entrega de e-mail) e nunca
+          vendidos a terceiros.
+        </p>
+
+        <h3>5. Seus direitos (LGPD)</h3>
+        <p>
+          Você tem direito de acessar, corrigir, excluir ou portar seus dados.
+          Para exercer esses direitos, entre em contato:
+          <a
+            href="mailto:suporte@materialempdf.online"
+            style="color: var(--rosa)"
+            >suporte@materialempdf.online</a
+          >
+        </p>
+
+        <h3>6. Cookies</h3>
+        <p>
+          Utilizamos cookies para análise de tráfego e personalização de
+          anúncios. Você pode desativá-los nas configurações do seu navegador.
+        </p>
+
+        <h3>7. Contato</h3>
+        <p>
+          Dúvidas? Fale com a gente:
+          <a
+            href="mailto:suporte@materialempdf.online"
+            style="color: var(--rosa)"
+            >suporte@materialempdf.online</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-termos">
+      <div class="modal">
+        <button
+          class="modal-close"
+          onclick="fecharModal('termos')"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+        <h2>Termos de Uso</h2>
+        <p><em>Última atualização: janeiro de 2026</em></p>
+
+        <h3>1. Aceitação</h3>
+        <p>
+          Ao realizar uma compra, você concorda com estes termos integralmente.
+        </p>
+
+        <h3>2. Produto</h3>
+        <p>
+          Os kits festa são produtos digitais (PDF, PNG, .studio) entregues por
+          link de download. Não há envio físico.
+        </p>
+
+        <h3>3. Licença de uso</h3>
+        <p>
+          A licença adquirida é pessoal e intransferível. É proibido revender,
+          redistribuir ou compartilhar os arquivos com terceiros.
+        </p>
+
+        <h3>4. Propriedade intelectual</h3>
+        <p>
+          Todos os materiais são de propriedade exclusiva da Materiais PDF.
+          Reprodução não autorizada é crime previsto em lei.
+        </p>
+
+        <h3>5. Garantia</h3>
+        <p>
+          Oferecemos 30 dias de garantia. Caso não fique satisfeito, solicite
+          reembolso pelo e-mail de suporte.
+        </p>
+
+        <h3>6. Limitação de responsabilidade</h3>
+        <p>
+          Não nos responsabilizamos por resultados de impressão que dependam de
+          equipamentos ou gráficas de terceiros.
+        </p>
+
+        <h3>7. Foro</h3>
+        <p>
+          Fica eleito o foro da comarca de São Paulo/SP para resolver eventuais
+          disputas.
+        </p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-reembolso">
+      <div class="modal">
+        <button
+          class="modal-close"
+          onclick="fecharModal('reembolso')"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+        <h2>Política de Reembolso</h2>
+        <p><em>Última atualização: janeiro de 2026</em></p>
+
+        <h3>Garantia de 30 dias</h3>
+        <p>
+          Você tem até 30 dias após a compra para solicitar o reembolso
+          integral, sem precisar apresentar justificativa.
+        </p>
+
+        <h3>Como solicitar</h3>
+        <ul>
+          <li>
+            Envie um e-mail para
+            <a
+              href="mailto:suporte@materialempdf.online"
+              style="color: var(--rosa)"
+              >suporte@materialempdf.online</a
+            >
+            com o assunto "Reembolso";
+          </li>
+          <li>Informe o e-mail usado na compra e o número do pedido;</li>
+          <li>
+            O reembolso será processado em até 5 dias úteis na forma de
+            pagamento original.
+          </li>
+        </ul>
+
+        <h3>Observações</h3>
+        <p>
+          Por se tratar de produto digital com entrega imediata, o reembolso é
+          concedido por política interna e não por obrigatoriedade legal após o
+          acesso. Ainda assim, honramos a garantia incondicionalmente.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // COUNTDOWN
+      function updateCountdown() {
+        const el = document.getElementById("countdown");
+        if (!el) return;
+        const stored = localStorage.getItem("cd_end");
+        let end;
+        if (stored) {
+          end = parseInt(stored);
+        } else {
+          end = Date.now() + (23 * 3600 + 47 * 60 + 13) * 1000;
+          localStorage.setItem("cd_end", end);
+        }
+        const diff = Math.max(0, end - Date.now());
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        el.textContent = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+        if (diff > 0) setTimeout(updateCountdown, 1000);
+      }
+      updateCountdown();
+
+      // CARROSSEL
+      let current = 0;
+      function moveCarousel(dir) {
+        const imgs = document.querySelectorAll(".carousel-img");
+        const dots = document.querySelectorAll(".dot");
+        imgs[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = (current + dir + imgs.length) % imgs.length;
+        imgs[current].classList.add("active");
+        dots[current].classList.add("active");
+      }
+
+      function currentSlide(n) {
+        const imgs = document.querySelectorAll(".carousel-img");
+        const dots = document.querySelectorAll(".dot");
+        imgs[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = n;
+        imgs[current].classList.add("active");
+        dots[current].classList.add("active");
+      }
+
+      setInterval(() => moveCarousel(1), 4000);
+
+      // FAQ
+      function toggleFaq(h3) {
+        const item = h3.parentElement;
+        item.classList.toggle("open");
+      }
+
+      // MODAIS POLÍTICA
+      function abrirPolitica(tipo) {
+        document.getElementById("modal-" + tipo).classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function fecharModal(tipo) {
+        document.getElementById("modal-" + tipo).classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+        overlay.addEventListener("click", function (e) {
+          if (e.target === this) {
+            this.classList.remove("open");
+            document.body.style.overflow = "";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
