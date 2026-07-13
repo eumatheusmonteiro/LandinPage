@@ -18,18 +18,37 @@ el.classList.add("active");
 }
 
 // CONTADOR (URGÊNCIA)
-let time = 600; // 10 minutos
+function startUrgencyCountdown() {
+  const countdownEl = document.getElementById("countdown");
+  if (!countdownEl) return;
 
-setInterval(() => {
-let min = Math.floor(time / 60);
-let sec = time % 60;
+  const stored = localStorage.getItem("cd_end");
+  let end = stored ? parseInt(stored, 10) : NaN;
 
-document.getElementById("countdown").innerText =
-`⏳ Oferta acaba em ${min}:${sec < 10 ? "0"+sec : sec}`;
+  if (isNaN(end) || end <= Date.now()) {
+    end = Date.now() + 10 * 60 * 1000; // 10 minutos
+    localStorage.setItem("cd_end", end);
+  }
 
-if(time > 0) time--;
+  const update = () => {
+    const diff = Math.max(0, end - Date.now());
+    const min = Math.floor(diff / 60000);
+    const sec = Math.floor((diff % 60000) / 1000);
+    countdownEl.innerText = `⏳ Oferta acaba em ${min}:${sec < 10 ? "0" + sec : sec}`;
 
-}, 1000);
+    if (diff > 0) {
+      setTimeout(update, 1000);
+    }
+  };
+
+  update();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", startUrgencyCountdown);
+} else {
+  startUrgencyCountdown();
+}
 
 // CARROSSEL
 let currentIndex = 0;

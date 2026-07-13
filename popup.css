@@ -1,0 +1,71 @@
+/* Popup de prova social discreto
+ * Aparece de baixo para cima com fade e não bloqueia a interação da página.
+ */
+
+#social-popup {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  pointer-events: none;
+  width: auto;
+  max-width: 320px;
+  min-width: 280px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+#social-popup.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-popup__card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(30, 32, 51, 0.96);
+  color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-popup__icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 18px;
+}
+
+.social-popup__message {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  #social-popup {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .social-popup__card {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .social-popup__message {
+    font-size: 13px;
+  }
+}
