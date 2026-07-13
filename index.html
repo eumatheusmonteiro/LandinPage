@@ -77,11 +77,12 @@
 
       html {
         scroll-behavior: smooth;
+        background: #0f0f1a;
       }
 
       body {
         font-family: "Segoe UI", Arial, sans-serif;
-        background: #fff;
+        background: #0f0f1a;
         color: var(--texto);
         font-size: 16px;
         line-height: 1.65;
@@ -101,7 +102,7 @@
         background: linear-gradient(90deg, #e91e8c 0%, #c0157a 100%);
         color: #fff;
         text-align: center;
-        padding: 10px 16px;
+        padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.5px;
@@ -135,8 +136,14 @@
           #3d0e5e 100%
         );
         color: #fff;
-        padding: 56px 20px 48px;
+        padding: calc(84px + env(safe-area-inset-top, 0px)) 20px 48px;
         text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding-top: calc(86px + env(safe-area-inset-top, 0px));
+        }
       }
 
       .hero-eyebrow {
@@ -838,25 +845,6 @@
         display: block;
       }
 
-      /* ===== CTA FLUTUANTE MOBILE ===== */
-      .cta-sticky {
-        display: none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #fff;
-        border-top: 2px solid var(--cinza-medio);
-        padding: 12px 20px;
-        z-index: 99;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      @media (max-width: 640px) {
-        .cta-sticky {
-          display: block;
-        }
-      }
 
       /* ===== RODAPÉ ===== */
       footer {
@@ -1690,17 +1678,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- CTA STICKY MOBILE -->
-    <div class="cta-sticky">
-      <a
-        href="https://checkout.materialempdf.online/VCCL1O8SD052"
-        class="btn-comprar"
-        style="font-size: 15px; padding: 14px 20px"
-      >
-        🎉 Comprar por R$19,90 →
-      </a>
-    </div>
 
     <!-- MODAIS DE POLÍTICA -->
     <div class="modal-overlay" id="modal-privacidade">

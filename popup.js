@@ -11,9 +11,9 @@ const socialPopup = {
     "🎉 Mais um kit vendido.",
   ],
   lastIndex: -1,
-  showDelay: 10000,
+  showDelay: 30000,
   visibleDuration: 5000,
-  intervalDelay: 10000,
+  intervalDelay: 30000,
 };
 
 function buildPopup() {
